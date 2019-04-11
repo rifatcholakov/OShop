@@ -14,6 +14,9 @@
     <tbody>
       <tr *ngFor="let item of cart.items">
         <td>
+          <div [style.backgroundImage]="'url(' + item.imageUrl + ')'" class="thumbnail"></div>
+        </td>
+        <td>
           {{ item.title }}
         </td>
         <td>
@@ -26,6 +29,7 @@
     </tbody>
     <tfoot>
       <tr>
+        <th></th>
         <th></th>
         <th></th>
         <th class="text-right">{{ cart.totalPrice | currency:'USD':true }}</th>
