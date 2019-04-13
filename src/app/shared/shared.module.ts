@@ -16,6 +16,7 @@ import { OrderService } from './services/order.service';
 import { ProductService } from './services/product.service';
 import { ShoppingCartService } from './services/shopping-cart.service';
 import { UserService } from './services/user.service';
+import { OrderDetailsService } from './services/order-details.service';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { UserService } from './services/user.service';
   declarations: [
     ProductCardComponent,
     ProductQuantityComponent,
+    
   ],
   exports: [
     ProductCardComponent,
@@ -40,7 +42,7 @@ import { UserService } from './services/user.service';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     NgbModule.forRoot().ngModule,
-    CommonModule
+    CommonModule,
   ],
   providers: [
     AuthService,
@@ -49,7 +51,8 @@ import { UserService } from './services/user.service';
     CategoryService,
     ProductService,
     ShoppingCartService,
-    OrderService
+    OrderService,
+    OrderDetailsService
   ]
 })
 export class SharedModule { }

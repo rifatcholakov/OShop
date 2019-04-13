@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="card">
+      <div class="card-body" *ngIf="order.userId">
+        <p>Date: {{ date }}</p>
+        <br>
+        <h4 class="card-title">USER:</h4>
+        <br>
+        <div class="ml-3">
+          <p><b>Name:</b> {{ user.name }}</p>
+          <p><b>Email:</b> {{ user.email }}</p>
+        </div>
+        <br>
+        <h4 class="card-title">PRODUCTS:</h4>
+        <br>
+        <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Product</th>
+                <th class="text-center" style="width: 230px">Quantity</th>
+                <th class="text-right" style="width: 200px">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of order.items">
+                <td>
+                  <div [style.backgroundImage]="'url(' + item.product.imageUrl + ')'" class="thumbnail"></div>
+                </td>
+                <td>
+                  {{ item.product.title }}
+                </td>
+                <td class="text-center">
+                  {{ item.quantity }}
+                </td>
+                <td class="text-right">
+                  {{ item.totalPrice | currency:'USD':true }}
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th class="text-right">{{ totalOrderPrice | currency:'USD':true }}</th>
+              </tr>
+            </tfoot>
+          </table>
+        <br>
+        <h4 class="card-title">SHIPPING TO:</h4>
+        <br>
+        <div class="ml-3">
+            <p><b>Name:</b> {{ order.shipping.name }}</p>
+            <p><b>City:</b> {{ order.shipping.city }}</p>
+            <p><b>Address:</b> {{ order.shipping.addressLine1 }}, {{ order.shipping.addressLine2 }}</p>
+        </div>
+        <br>
+        <button (click)="deleteOrder(order.$key)" class="btn btn-danger btn-sm">Delete Order</button>
+      </div>
+    </div>
+</div>
+<br>

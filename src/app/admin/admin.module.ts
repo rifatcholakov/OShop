@@ -3,11 +3,11 @@ import { RouterModule } from '@angular/router';
 import { AuthGuard } from 'shared/services/auth-guard.service';
 import { SharedModule } from 'shared/shared.module';
 
+import { AdminManageOrderComponent } from './components/admin-manage-order/admin-manage-order.component';
 import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
 import { AdminProductsComponent } from './components/admin-products/admin-products.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { AdminAuthGuard } from './services/admin-auth-guard.service';
-import { AdminManageOrderComponent } from './admin-manage-order/admin-manage-order.component';
 
 @NgModule({
   imports: [

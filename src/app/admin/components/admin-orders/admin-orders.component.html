@@ -12,7 +12,7 @@
       <td>{{ order.shipping.name }}</td>
       <td>{{ order.datePlaced | date}}</td>
       <td>
-        <a routerLink="/admin/order/:id">View</a>
+        <a routerLink="{{ '/admin/order/' + order.$key }}">View</a>
       </td>
     </tr>
   </tbody> 

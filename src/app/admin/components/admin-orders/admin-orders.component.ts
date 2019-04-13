@@ -13,4 +13,5 @@ export class AdminOrdersComponent {
   constructor(private orderService: OrderService) { 
     this.orders$ = orderService.getOrders();
   }
+  
 }
