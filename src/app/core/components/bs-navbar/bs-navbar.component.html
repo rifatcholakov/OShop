@@ -33,8 +33,9 @@
                 <ng-container *ngIf="appUser.isAdmin">
                   <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
                   <a class="dropdown-item" routerLink="/admin/products">Manage Products</a>
+                  <a class="dropdown-item" routerLink="/admin/users">Manage Users</a>
                 </ng-container>
-                <a class="dropdown-item" (click)="logout()">Log Out</a>
+                <a class="dropdown-item" id="logout" (click)="logout()">Log Out</a>
               </div>
             </li>
         </ul>

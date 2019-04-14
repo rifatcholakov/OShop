@@ -1,4 +1,5 @@
 
-.dropdown-toggle { 
+.dropdown-toggle,
+#logout { 
   cursor: pointer;
 }

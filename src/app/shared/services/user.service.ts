@@ -11,11 +11,21 @@ export class UserService {
   save(user: firebase.User) {
     this.db.object('/users/' + user.uid).update({
       name: user.displayName,
-      email: user.email
+      email: user.email,
+    });
+  }
+
+  updateRole(user) {
+    this.db.object('/users/' + user.uid).update({
+      isAdmin: !user.isAdmin
     });
   }
 
   get(uid: string): FirebaseObjectObservable<AppUser> { 
     return this.db.object('/users/' + uid);
+  }
+
+  getAll() {
+    return this.db.list('/users');
   }
 }

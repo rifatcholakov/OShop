@@ -7,7 +7,7 @@
       (click)="clearCart()"
       class="btn btn-light btn-sm">Clear Shopping Cart</button>
   </p>
-  <table class="table">
+  <table class="table" *ngIf="cart.totalItemsCount">
     <thead>
       <tr>
         <th></th>

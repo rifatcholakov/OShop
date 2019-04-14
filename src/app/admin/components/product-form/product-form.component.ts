@@ -13,6 +13,7 @@ export class ProductFormComponent implements OnInit {
   categories$;
   product = {};
   id;
+  isNew;
 
   constructor(
     private router: Router,
@@ -40,6 +41,10 @@ export class ProductFormComponent implements OnInit {
   }
 
   ngOnInit() {
+    let urlPath = (this.router.url).split('/');
+    let lastParam = urlPath[urlPath.length - 1];
+    let isNew = lastParam === 'new';
+    this.isNew = isNew;
   }
 
 }
