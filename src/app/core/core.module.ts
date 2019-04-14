@@ -6,6 +6,7 @@ import { SharedModule } from 'shared/shared.module';
 import { BsNavbarComponent } from './components/bs-navbar/bs-navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { BsFooterComponent } from './components/bs-footer/bs-footer.component';
 
 @NgModule({
   imports: [
@@ -15,11 +16,13 @@ import { LoginComponent } from './components/login/login.component';
   ],
   declarations: [
     BsNavbarComponent,
+    BsFooterComponent,
     HomeComponent,
     LoginComponent,
   ],
   exports: [
-    BsNavbarComponent
+    BsNavbarComponent,
+    BsFooterComponent,
   ]
 })
 export class CoreModule { }
