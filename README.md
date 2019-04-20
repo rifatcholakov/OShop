@@ -1,4 +1,4 @@
-# Oshop
+# OShop
 This project demonstrates a simple e-commerce application for an imaginary organic shop. It is built with Angular, Firebase and Bootstrap 4.
 ![Oshop](https://i.imgur.com/DF7TreM.jpg)
 
