@@ -7,10 +7,13 @@ This project demonstrates a simple e-commerce application for an imaginary organ
 
 ## Fetures
  * Authentication using Google
+ * Authorization
  * Users role managment
  * CRUD(Create, Read, Update, Delete) Products
  * An option to sort products by category
- * Orders mangment
+ * User order managment
+ * Admin orders mangment
+ * Nice looking and friendly UI
 
 ## Important
 
