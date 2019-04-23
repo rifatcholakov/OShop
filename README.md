@@ -1,34 +1,30 @@
 # OShop
 This project demonstrates a simple e-commerce application for an imaginary organic shop. It is built with Angular, Firebase and Bootstrap 4.
-![Oshop](https://i.imgur.com/cwSWXLO.jpg)
+![OShop](https://i.imgur.com/DF7TreM.jpg)
 
 ## Preview
-[Click here](https://mighty-scrubland-69743.herokuapp.com/)
+[Click here](https://oshop-76492.firebaseapp.com/)
 
 ## Fetures
- * Authentication and authorization using mongodb
- * Users role implementation
- * User profile
- * Add products
- * Manage categories
- * An option to sort products by brands, frets, wood and price
- * History purchases 
- * PayPal checkout
+ * Authentication using Google
+ * Authorization
+ * Users role managment
+ * CRUD(Create, Read, Update, Delete) Products
+ * An option to sort products by category
+ * User order managment
+ * Admin orders mangment
  * Nice looking and friendly UI
 
 ## Important
 
-Before running this application on your machine, make sure the configuration of the `.env` file coresponds to your machine setup.
+Before running this application on your machine, create a Firebase project. You need to replace the Firebase settings I've defined in /src/environments with the settings of your own Firebase project.
 
 ## Running the Application
 
 1. Clone the repository using git or download it as zip
 2. Run `npm install` to install all of the dependencies
-3. Go inside the client directory using `cd client`
-4. Install the dependencies there using `npm install`
-3. Go back to the root directory using `cd ../`
-4. Run `npm run dev` to start the app in development mode
-5. Navigate to http://localhost:3000/
+3. Run `ng serve` for a dev server
+4. Navigate to http://localhost:4200/
 
 ## License
 
